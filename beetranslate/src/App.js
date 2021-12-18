@@ -1,14 +1,11 @@
 import './App.css';
+import FileUploaderPage from "./fileUploader/FileUploaderPage";
 
 function App() {
   return (
     <div className="App">
-    <div className="FileUploaderPage">
-
-    </div>
-    
+      <FileUploaderPage/>   
     </div>
   );
 }
-
 export default App;
