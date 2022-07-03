@@ -19,7 +19,7 @@ export function jsonToXlsx(json) {
 export function txtToJson(txt) {
     const rows = txt.replace("start", "").replace("end", "").trim()
     return rows.split("\n").map(row => {
-        const [feeder, date, time, rfId, shouldReceive, awards, total, wakefulness] = row.trim().split("###")
+        const [feeder, date, time, rfId, shouldReceive, awards, wakefulness] = row.trim().split("###")
         return {
             "Feeder": feeder,
             "Date": date,
@@ -27,7 +27,6 @@ export function txtToJson(txt) {
             'RFID': rfId,
             'Should receive an award': shouldReceive,
             'How many awards he received': awards,
-            'Of how many': total,
             'Wakefulness': wakefulness,
         }
     })
